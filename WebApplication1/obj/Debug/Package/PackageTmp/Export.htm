@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <script type="text/javascript" src="jquery141.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#export').click(function () {
+                var content = "";
+                $('#table tr').each(function (index, element) {
+                    var line = "";
+                    $(element).find('td').each(function (i, e) {
+                        line += $(e).html() + '|';
+                    });
+                    content += line.substring(0, line.length - 1);
+                    content += ",";
+                });
+                content = content.substring(0, content.length - 1);
+                //                var URL = "192.168.0.5:82/ExcelOutput.svc/GenerateExcel";
+                //                var param = "eStr=" + content;
+                //                var xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                //                xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                //                xmlHttp.setRequestHeader("Content-Length", param.length);
+                //                xmlHttp.send(param);
+//                $.ajax({
+//                    type: "POST",
+//                    async:false,
+//                    url: "http://192.168.0.5:83/ExcelOutput.aspx",
+//                    dataType: "json",
+//                    data: {eStr:content},
+//                    error: function (a, b, c) {
+//                        alert("error");
+//                    }
+//                });
+                window.open("ExcelOutput.aspx?eStr=" + encodeURIComponent(content), "Excel Output", "width=600, height=500");
+            });
+        });
+    </script>
+    <title>Export to excel</title>
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <td>column 1</td>
+            <td>column 2</td>
+            <td>column 3</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>y</td>
+            <td>z</td>
+        </tr>
+    </table>
+    <input type="button" id="export" value="Export to Excel" />
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ExcelOutput.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+<%--    <input ID="Name1" name="Name2" type="text" runat="server" />
+    <select id="option1" name="gradute">
+    <option>first</option>
+    <option>second</option>
+    <option>third</option>
+    </select>--%>
+    <asp:Label ID="Label1" runat="server" Text="Export data to excel" />&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="Export" onclick="Button1_Click" />
+        </div>
+    </form>
+</body>
+</html>

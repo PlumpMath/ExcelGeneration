@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://192.168.0.5" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="ExcelOutput2" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Profile1" publishMethod="MSDeploy" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="07/30/2014 11:20:50" />
+    <file relUrl="ExcelOutput.aspx" publishTime="07/25/2014 17:36:35" />
+    <file relUrl="bin/WebApplication1.pdb" publishTime="07/31/2014 17:02:30" />
+    <file relUrl="bin/WebApplication1.dll" publishTime="07/31/2014 17:02:30" />
+    <file relUrl="Export.htm" publishTime="07/29/2014 11:47:56" />
+    <file relUrl="ExcelExport.ashx" publishTime="07/16/2014 16:31:46" />
+  </publishProfile>
+</publishData>
